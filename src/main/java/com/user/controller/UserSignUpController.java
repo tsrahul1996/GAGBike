@@ -1,6 +1,7 @@
 package com.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserSignUpController {
 
 	@Autowired
@@ -48,7 +50,6 @@ public class UserSignUpController {
 		int tokenNo = Integer.parseInt(confirmationToken);
 		UniversalLoginStg token =  (UniversalLoginStg) universalLoginStgDao.findByTokenNo(tokenNo);
 
-       
 		return 	"success";
 	}
 	
@@ -76,5 +77,9 @@ public class UserSignUpController {
 		return "success";
 	}
 
-	
+	@GetMapping(path = "/userSignUpSave")
+	public String save()  {
+		
+		return "success";
+	}
 }

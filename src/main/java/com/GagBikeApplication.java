@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.GAGBike","com.user","com.GeneralServices"})
+@ComponentScan({"com.user","com.GeneralServices"})
 public class GagBikeApplication {
 
 	public static void main(String[] args) {

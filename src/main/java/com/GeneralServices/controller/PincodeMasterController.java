@@ -3,6 +3,7 @@ package com.GeneralServices.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,11 +21,12 @@ public class PincodeMasterController {
 	@Autowired
 	PincodeMasterDAO pincodeMasterDAO;
 	
-	@PostMapping(path = "/save")
-	public Iterable<PincodeMaster> save(@RequestBody PincodeMaster pincode) throws IOException  {
+	@PostMapping(path = "/select")
+	public Optional<PincodeMaster> save(@RequestBody PincodeMaster pincode) throws IOException  {
 
+		
 	//	return pincodeMasterDAO.findByPincode(pincode.getPincode());
-		return pincodeMasterDAO.findAll();
+		return pincodeMasterDAO.findByPincode(pincode.getPincode());
 	}
 
 }

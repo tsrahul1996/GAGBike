@@ -116,6 +116,7 @@ public UniversalLoginStg(long stgUserId, String firstName, String lastName, long
 public UniversalLoginStg(UniversalLoginStg universalLoginStg) {
 	this.addDate =  new Date();
 	this.tokenNo = generateTokenNo();
+	this.status	 = "P";
 }
 
 

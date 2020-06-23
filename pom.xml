@@ -34,19 +34,30 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		
-		<!-- H2 DataBase 
+	<!-- spring boot security -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+ 			<groupId>org.springframework.boot</groupId>
+ 			 <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		 -->
-		<!-- MySql DataBase -->
+		<dependency>
+  			<groupId>org.springframework.security</groupId>
+  			<artifactId>spring-security-test</artifactId>
+ 			<scope>test</scope> 
+		</dependency>
+		<!-- spring boot mail -->
+		
+		<!-- H2 DataBase  -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+		
+		<!-- MySql DataBase 
 		<dependency>
 		   <groupId>mysql</groupId>
 		   <artifactId>mysql-connector-java</artifactId>
-		</dependency>
+		</dependency>-->
 		
 		<dependency>
 			<groupId>org.projectlombok</groupId>
