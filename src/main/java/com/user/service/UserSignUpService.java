@@ -41,13 +41,11 @@ public class UserSignUpService {
     @Autowired
     private EmailSenderService emailSenderService;
     
-	public void save(UniversalLoginStg user) throws AddressException, MessagingException, IOException {
+	public UniversalLoginStg save(UniversalLoginStg user) throws AddressException, MessagingException, IOException {
 		
 		String URLString = "";
 		
 		String  password= user.getPasswordHash();
-
-		universalLoginStgDao.save(user);
 		
 		int token = user.getTokenNo();
 		
@@ -63,8 +61,9 @@ public class UserSignUpService {
         model.put("url", URLString);
         model.put("token", token);
         mail.setProps(model);
-        emailSenderService.sendEmail(mail);
-	      		
+      //  emailSenderService.sendEmail(mail);
+	      
+        return universalLoginStgDao.save(user);
 	}
 	
 

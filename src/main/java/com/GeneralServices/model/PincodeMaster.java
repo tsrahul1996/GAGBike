@@ -41,8 +41,8 @@ public class PincodeMaster implements Serializable  {
 	//@JoinColumn(name = "district_code",referencedColumnName="district_code")
 	//private List districtDetails;
 	
-	@ManyToOne
-	private DistrictMaster districtDetails;
+	//@ManyToOne
+	//private DistrictMaster districtDetails;
 	
 	public String getDistrictCode() {
 		return districtCode;
@@ -50,12 +50,12 @@ public class PincodeMaster implements Serializable  {
 	public void setDistrictCode(String districtCode) {
 		this.districtCode = districtCode;
 	}
-	public DistrictMaster getDistrictDetails() {
-		return districtDetails;
-	}
-	public void setDistrictDetails(DistrictMaster districtDetails) {
-		this.districtDetails = districtDetails;
-	}
+
+	/*
+	 * public DistrictMaster getDistrictDetails() { return districtDetails; } public
+	 * void setDistrictDetails(DistrictMaster districtDetails) {
+	 * this.districtDetails = districtDetails; }
+	 */
 	public String getCountryCode() {
 		return countryCode;
 	}

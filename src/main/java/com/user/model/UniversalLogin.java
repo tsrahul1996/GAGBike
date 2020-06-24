@@ -2,6 +2,7 @@ package com.user.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,6 +18,7 @@ public class UniversalLogin {
 	
 
 	@Id
+	@Column(name ="country_code")
 	private long userId; 
 	private long primaryMobile;
 	private long secondaryMobile;
@@ -25,7 +27,7 @@ public class UniversalLogin {
 	private String passwordHash; 
 	private Date addDate;
 	private Date registeredAt ;
-	private Date	lastLogin ; 							
+	private Date lastLogin ; 							
 	private byte failureCount;
 	private Date lastPwdChngDt;
 	private String status;
