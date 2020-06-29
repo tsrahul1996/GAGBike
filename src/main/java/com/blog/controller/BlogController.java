@@ -21,7 +21,7 @@ import com.blog.model.BlogPost;
 import com.blog.service.BlogPostService;
 import com.user.model.UniversalLoginStg;
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class BlogController {
 	
 	@Autowired

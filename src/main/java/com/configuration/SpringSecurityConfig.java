@@ -1,5 +1,5 @@
 
-
+	/*
 package com.configuration;
 
 import java.util.Arrays;
@@ -18,7 +18,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	
+	Last commit
 	   @Override
 	    protected void configure(HttpSecurity http) throws Exception {
 		   http.cors();
@@ -26,18 +26,24 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
           .authorizeRequests()
           .antMatchers(HttpMethod.OPTIONS, "/**")
           .permitAll();
-		   
+		 
 		   http.authorizeRequests().antMatchers("/").permitAll().and()
            .authorizeRequests().antMatchers("/console/**").permitAll();
 		   
 		   http.headers().frameOptions().disable(); 
 	  
-		   
+		   http
+	       .httpBasic().and()
+	       .authorizeRequests()
+	       .antMatchers("/saveBlog" , "/saveBlog/**")
+	       .permitAll().anyRequest().authenticated()
+	       .and().csrf().disable();
 		
 	    }
 
 
-
+	   */
+		
 	/*
 	 @Override protected void configure(HttpSecurity http) throws Exception {
 	 http.cors().and().csrf(). disable() .authorizeRequests()
@@ -53,7 +59,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	UrlBasedCorsConfigurationSource source = new
 	UrlBasedCorsConfigurationSource(); source.registerCorsConfiguration("/**",
 	configuration); return source; }
-	 */
+	
 	
 
-}
+} */

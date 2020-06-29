@@ -67,7 +67,7 @@
 				</exclusion>
 			</exclusions>			
 		</dependency>
-		<!-- spring boot security -->
+		<!-- spring boot security
 		<dependency>
  			<groupId>org.springframework.boot</groupId>
  			 <artifactId>spring-boot-starter-security</artifactId>
@@ -76,7 +76,7 @@
   			<groupId>org.springframework.security</groupId>
   			<artifactId>spring-security-test</artifactId>
  			<scope>test</scope> 
-		</dependency>
+		</dependency> -->
 		<!-- spring boot mail -->
 		<dependency>
 		   <groupId>org.springframework.boot</groupId>

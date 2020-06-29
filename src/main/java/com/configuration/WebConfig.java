@@ -1,4 +1,4 @@
-package com.configuration;
+	/*package com.configuration;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -10,3 +10,4 @@ public class WebConfig implements  WebMvcConfigurer   {
 	                .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
 	    }
 }
+*/
